@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, FileDown, Send, Check, Copy, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowDownToLine, Send, Check, Copy, CheckCircle } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export const Contact: React.FC = () => {
@@ -38,18 +38,18 @@ export const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-20 relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider mb-2">
-            <Mail className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200/80 text-indigo-700 text-xs font-semibold uppercase tracking-wider mb-2">
+            <Mail className="w-3.5 h-3.5 text-indigo-600" />
             <span>Get in Touch</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Contact & Hire
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
+          <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl">
             Open to Java Backend Developer opportunities. Feel free to contact me directly by email or phone.
           </p>
         </div>
@@ -60,16 +60,16 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             
             {/* Email */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0c1322] border border-slate-800 flex items-center justify-between card-hover-glow">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm shadow-slate-200/50 hover:border-indigo-200 transition-all flex items-center justify-between">
               <div className="flex items-center gap-3.5 truncate mr-2">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="truncate">
-                  <span className="text-[10px] font-mono text-slate-500 uppercase block">DIRECT EMAIL</span>
+                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">DIRECT EMAIL</span>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="text-sm font-semibold text-white hover:text-emerald-400 transition-colors truncate block"
+                    className="text-sm font-bold text-slate-900 hover:text-indigo-600 transition-colors truncate block"
                   >
                     {personalInfo.email}
                   </a>
@@ -77,24 +77,24 @@ export const Contact: React.FC = () => {
               </div>
               <button
                 onClick={copyEmail}
-                className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-colors shrink-0"
+                className="p-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-300 transition-colors shrink-0"
                 title="Copy email"
               >
-                {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                {copiedEmail ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
 
             {/* Phone */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0c1322] border border-slate-800 flex items-center justify-between card-hover-glow">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm shadow-slate-200/50 hover:border-indigo-200 transition-all flex items-center justify-between">
               <div className="flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-slate-500 uppercase block">PHONE NUMBER</span>
+                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">PHONE NUMBER</span>
                   <a
                     href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
-                    className="text-sm font-semibold text-white hover:text-emerald-400 transition-colors"
+                    className="text-sm font-bold text-slate-900 hover:text-indigo-600 transition-colors"
                   >
                     {personalInfo.phone}
                   </a>
@@ -102,24 +102,24 @@ export const Contact: React.FC = () => {
               </div>
               <button
                 onClick={copyPhone}
-                className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-colors shrink-0"
+                className="p-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-300 transition-colors shrink-0"
                 title="Copy phone"
               >
-                {copiedPhone ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                {copiedPhone ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
 
             {/* Location */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0c1322] border border-slate-800 flex items-center gap-3.5 card-hover-glow">
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm shadow-slate-200/50 flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-slate-500 uppercase block">LOCATION</span>
-                <p className="text-sm font-semibold text-white">
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">LOCATION</span>
+                <p className="text-sm font-bold text-slate-900">
                   {personalInfo.location}
                 </p>
-                <p className="text-xs text-slate-400">Available for Hyderabad, Remote, & Hybrid</p>
+                <p className="text-xs text-slate-500">Available for Hyderabad, Remote, & Hybrid</p>
               </div>
             </div>
 
@@ -128,10 +128,10 @@ export const Contact: React.FC = () => {
               <a
                 href={personalInfo.resumeUrl}
                 download="Kotturu_Saikumar_Java_Backend_Developer_Resume.pdf"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-600/20 hover:shadow-indigo-600/35 transition-all"
               >
-                <FileDown className="w-4 h-4" />
-                <span>Download Official Resume PDF</span>
+                <ArrowDownToLine className="w-4 h-4" />
+                <span>Download Official Resume (PDF)</span>
               </a>
             </div>
 
@@ -139,14 +139,14 @@ export const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-[#0c1322] border border-slate-800 space-y-4">
-              <h3 className="font-bold text-white text-lg">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200/80 shadow-sm shadow-slate-200/60 space-y-4">
+              <h3 className="font-bold text-slate-900 text-lg">
                 Send Direct Message
               </h3>
 
               {isSent && (
-                <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 shrink-0" />
+                <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>Opening your default email client with your inquiry...</span>
                 </div>
               )}
@@ -154,7 +154,7 @@ export const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-mono text-slate-400 block mb-1.5">
+                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1.5">
                       YOUR NAME *
                     </label>
                     <input
@@ -163,12 +163,12 @@ export const Contact: React.FC = () => {
                       placeholder="e.g. John Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-emerald-400 transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-xs focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100 transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono text-slate-400 block mb-1.5">
+                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1.5">
                       YOUR EMAIL *
                     </label>
                     <input
@@ -177,13 +177,13 @@ export const Contact: React.FC = () => {
                       placeholder="e.g. recruiter@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-emerald-400 transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-xs focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100 transition-all"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-mono text-slate-400 block mb-1.5">
+                  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1.5">
                     SUBJECT
                   </label>
                   <input
@@ -191,12 +191,12 @@ export const Contact: React.FC = () => {
                     placeholder="e.g. Interview Opportunity for Java Backend Role"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-emerald-400 transition-colors"
+                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-xs focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100 transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="text-xs font-mono text-slate-400 block mb-1.5">
+                  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1.5">
                     MESSAGE / JOB DESCRIPTION *
                   </label>
                   <textarea
@@ -205,15 +205,15 @@ export const Contact: React.FC = () => {
                     placeholder="Hi Saikumar, we have an opening for a Java Backend Developer and would like to discuss..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-emerald-400 transition-colors resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-xs focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100 transition-all resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs border border-slate-800 hover:border-emerald-500/40 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3.5 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs shadow-md shadow-indigo-600/20 hover:shadow-indigo-600/35 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <Send className="w-3.5 h-3.5 text-emerald-400" />
+                  <Send className="w-3.5 h-3.5 text-white" />
                   <span>Send Direct Email</span>
                 </button>
               </form>

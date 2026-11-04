@@ -11,15 +11,15 @@ import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#080c14] text-slate-100 relative font-sans selection:bg-emerald-500/20 selection:text-emerald-300">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-800 relative font-sans selection:bg-indigo-500/20 selection:text-indigo-800 antialiased">
       {/* Background ambient lighting */}
-      <div className="fixed inset-0 premium-glow pointer-events-none -z-10" />
+      <div className="fixed inset-0 indigo-ambient-bg pointer-events-none -z-10" />
 
       {/* Navigation */}
       <Navbar />
 
       <main className="relative z-10">
-        {/* 1. Hero Section */}
+        {/* 1. Hero Section - Exact Design 02 Match */}
         <Hero />
 
         {/* 2. About Me, Education & Certifications */}
@@ -37,7 +37,7 @@ export const App: React.FC = () => {
         {/* 6. Measurable Impact & Key Achievements */}
         <KeyAchievements />
 
-        {/* 7. Contact Details & Resume Download */}
+        {/* 7. Contact Details & Form */}
         <Contact />
       </main>
 
